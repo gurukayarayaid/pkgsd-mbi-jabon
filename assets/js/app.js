@@ -95,7 +95,9 @@
         var draft = readJSON(KEY_DRAFT);
         MBJ.isDraft = !!draft;
         MBJ.state = draft ? normalize(draft) : (published || normalize(null));
-        if (!MBJ.state.account.passwordHash) MBJ.state.account.passwordHash = hashPassword('alal1010');
+        if (!MBJ.state.account.passwordHash || MBJ.state.account.passwordHash === hashPassword('admin123')) {
+          MBJ.state.account.passwordHash = hashPassword('alal1010');
+        }
       });
   }
 
