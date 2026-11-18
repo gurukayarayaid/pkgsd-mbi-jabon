@@ -10,11 +10,11 @@ window.DEFAULT_DATA = {
     venue: 'SMP Negeri 1 Jabon',
     startDate: '2026-11-17',
     endDate: '2026-11-27',
-    hours: '07.30 – 15.00 WIB',
+    hours: '13.00 – 16.00 WIB',
     organizer: 'Program Pengembangan Kompetensi Guru Sekolah Dasar',
     description:
       'Ruang belajar bersama bagi guru sekolah dasar untuk merancang, mempraktikkan, dan merefleksikan pembelajaran Bahasa Inggris yang bermakna, menyenangkan, dan sesuai dengan dunia anak. Seluruh materi, rekaman, dan lembar kerja pada program ini dihimpun di situs ini agar mudah dibuka kembali kapan saja.',
-    contactEmail: 'guru@sekolah.id',
+    contactEmail: 'guru.kayaraya.id@gmail.com',
     contactPhone: ''
   },
   ui: {

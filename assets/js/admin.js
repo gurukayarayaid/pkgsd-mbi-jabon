@@ -44,10 +44,8 @@
       '<section class="login-shell"><div class="wrap"><div class="login-card">' +
         '<span class="kicker">Panel admin</span>' +
         '<h1>Masuk untuk mengelola situs</h1>' +
-        '<p class="muted small">Kelola program, 10 pertemuan, materi, dan berkas. Kata sandi bawaan <strong>admin123</strong> — segera ubah di tab Akun setelah masuk.</p>' +
+        '<p class="muted small">Kelola program, 10 pertemuan, materi, dan berkas. Kata sandi bawaan <strong>alal1010</strong> — segera ubah di tab Akun setelah masuk.</p>' +
         '<form data-form="login" style="margin-top:1.2rem">' +
-          '<div class="field"><label for="login-user">Nama pengguna</label>' +
-            '<input id="login-user" name="user" value="admin" autocomplete="username" required></div>' +
           '<div class="field"><label for="login-pass">Kata sandi</label>' +
             '<input id="login-pass" type="password" name="pass" autocomplete="current-password" required></div>' +
           '<button class="btn btn--block" type="submit">Masuk</button>' +
@@ -185,7 +183,7 @@
         '<div class="field-row">' +
           '<div class="field"><label>Tanggal mulai</label><input type="date" name="startDate" value="' + esc(p.startDate) + '"></div>' +
           '<div class="field"><label>Tanggal selesai</label><input type="date" name="endDate" value="' + esc(p.endDate) + '"></div>' +
-          '<div class="field"><label>Jam kegiatan</label><input name="hours" value="' + esc(p.hours) + '" placeholder="07.30 – 15.00 WIB"></div>' +
+          '<div class="field"><label>Jam kegiatan</label><input name="hours" value="' + esc(p.hours) + '" placeholder="13.00 – 16.00 WIB"></div>' +
         '</div>' +
         '<div class="field"><label>Penyelenggara</label><input name="organizer" value="' + esc(p.organizer) + '"></div>' +
         '<div class="field"><label>Deskripsi program</label><textarea name="description" rows="4">' + esc(p.description) + '</textarea></div>' +
@@ -455,17 +453,15 @@
 
   /* ---------------- akun ---------------- */
   function tabAkun() {
-    var acc = MBJ.state.account || {};
     return '' +
       '<form class="panel" data-form="account">' +
         '<h2>Akun admin</h2>' +
-        '<p class="panel__hint">Ganti nama pengguna dan kata sandi untuk mencegah orang lain mengubah isi situs dari peramban ini.</p>' +
-        '<div class="field"><label>Nama pengguna</label><input name="user" value="' + esc(acc.userId) + '" required></div>' +
+        '<p class="panel__hint">Ganti kata sandi untuk mencegah orang lain mengubah isi situs dari peramban ini.</p>' +
         '<div class="field-row">' +
           '<div class="field"><label>Kata sandi baru</label><input type="password" name="pass1" minlength="6" placeholder="Minimal 6 karakter"></div>' +
           '<div class="field"><label>Ulangi kata sandi baru</label><input type="password" name="pass2" minlength="6" placeholder="Ulangi kata sandi"></div>' +
         '</div>' +
-        '<p class="small muted">Kosongkan kata sandi bila hanya ingin mengganti nama pengguna.</p>' +
+        '<p class="small muted">Kosongkan bila tidak ingin mengganti kata sandi.</p>' +
         '<button class="btn" type="submit">Simpan akun</button>' +
       '</form>' +
 
@@ -488,11 +484,11 @@
     var s = MBJ.state;
 
     if (kind === 'login') {
-      if (MBJ.login(fd.get('user'), fd.get('pass'))) {
+      if (MBJ.login(fd.get('pass'))) {
         MBJ.toast('Selamat datang kembali.');
         render();
       } else {
-        MBJ.toast('Nama pengguna atau kata sandi salah.');
+        MBJ.toast('Kata sandi salah.');
       }
       return;
     }
@@ -580,16 +576,13 @@
     }
 
     if (kind === 'account') {
-      var user = String(fd.get('user') || '').trim();
       var p1 = String(fd.get('pass1') || '');
       var p2 = String(fd.get('pass2') || '');
-      if (!user) { MBJ.toast('Nama pengguna wajib diisi.'); return; }
       if (p1 || p2) {
         if (p1.length < 6) { MBJ.toast('Kata sandi minimal 6 karakter.'); return; }
         if (p1 !== p2) { MBJ.toast('Kata sandi tidak sama.'); return; }
         s.account.passwordHash = MBJ.hashPassword(p1);
       }
-      s.account.userId = user;
       save('Akun diperbarui.');
       return;
     }

@@ -95,7 +95,7 @@
         var draft = readJSON(KEY_DRAFT);
         MBJ.isDraft = !!draft;
         MBJ.state = draft ? normalize(draft) : (published || normalize(null));
-        if (!MBJ.state.account.passwordHash) MBJ.state.account.passwordHash = hashPassword('admin123');
+        if (!MBJ.state.account.passwordHash) MBJ.state.account.passwordHash = hashPassword('alal1010');
       });
   }
 
@@ -119,10 +119,9 @@
   MBJ.isAdmin = function () {
     try { return sessionStorage.getItem(KEY_SESSION) === 'ok'; } catch (e) { return false; }
   };
-  MBJ.login = function (user, pw) {
+  MBJ.login = function (pw) {
     var acc = MBJ.state.account || {};
-    if (String(user || '').trim().toLowerCase() === String(acc.userId || 'admin').toLowerCase() &&
-        hashPassword(pw) === acc.passwordHash) {
+    if (hashPassword(pw) === acc.passwordHash) {
       try { sessionStorage.setItem(KEY_SESSION, 'ok'); } catch (e) {}
       return true;
     }

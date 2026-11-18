@@ -16,7 +16,7 @@ Situs statis (HTML, CSS, JavaScript tanpa build), siap dipasang di GitHub Pages.
 
 ## Mengelola isi
 
-1. Buka `admin.html`, masuk dengan pengguna `admin` dan sandi `admin123`.
+1. Buka `admin.html`, masuk dengan sandi `alal1010`.
 2. Sunting program, pertemuan, atau materi. Perubahan tersimpan sebagai **draf lokal** di peramban.
 3. Buka tab **Publikasi** → **Unduh content.json**.
 4. Unggah `content.json` ke folder utama repositori (menggantikan berkas lama), lalu tunggu GitHub Pages memperbarui.
