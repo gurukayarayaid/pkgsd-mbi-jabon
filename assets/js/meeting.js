@@ -40,7 +40,7 @@
   function mediaBlock(m) {
     var type = m.type || 'text';
     if (type === 'image') {
-      if (!m.url) return placeholder('Gambar belum ditambahkan', 'Unggah gambar melalui panel admin atau Pusat Berkas.');
+      if (!m.url) return placeholder('Gambar belum ditambahkan', 'Unggah gambar melalui panel admin.');
       return '<figure class="figure"><img src="' + MBJ.esc(m.url) + '" alt="' + MBJ.esc(m.title || '') + '" loading="lazy">' +
         (m.caption ? '<figcaption>' + MBJ.esc(m.caption) + '</figcaption>' : '') + '</figure>';
     }
@@ -129,7 +129,7 @@
                 (m.day || '') + '. ' + MBJ.esc(MBJ.sentences(m.title, 46)) + '</a>';
             }).join('') +
           '</div>' +
-          '<div style="margin-top:1.2rem"><a class="btn btn--ghost btn--block btn--sm" href="media.html">Pusat berkas</a></div>' +
+          '<div style="margin-top:1.2rem"><a class="btn btn--ghost btn--block btn--sm" href="downloads.html">Unduh berkas</a></div>' +
         '</aside>' +
 
         '<div>' +

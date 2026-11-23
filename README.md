@@ -11,7 +11,6 @@ Situs statis (HTML, CSS, JavaScript tanpa build), siap dipasang di GitHub Pages.
 | --- | --- |
 | `index.html` | Beranda: informasi program, progres, 10 kartu pertemuan, tombol berbagi |
 | `pertemuan.html?id=hari-1` | Materi satu pertemuan: tujuan, teks, gambar, video, PDF, tombol berbagi per materi |
-| `media.html` | Pusat berkas: unggah (tarik & lepas), cari, saring, buka, unduh |
 | `downloads.html` | Unduh berkas per folder (BG, BS, Infografik Topik 1, LK, LK-DONE, RPP, RPTM, SPT, STEP JIGSAW), cari berkas, dan **Unduh semua (.zip)** per folder |
 | `admin.html` | Panel admin: dasbor, program, pertemuan & materi, berkas, publikasi, akun |
 
@@ -24,12 +23,12 @@ Situs statis (HTML, CSS, JavaScript tanpa build), siap dipasang di GitHub Pages.
 5. Segera ganti kata sandi di tab **Akun** setelah penggunaan pertama.
 
 Berkas gambar/video/PDF untuk semua pengunjung: letakkan di `assets/unggahan/`, lalu tautkan
-(misalnya `assets/unggahan/lembar-kerja-3.pdf`) dari tab **Berkas** atau dari materi.
+(misalnya `assets/unggahan/lembar-kerja-3.pdf`) dari tab **Berkas** di panel admin atau dari materi.
 
 Berkas yang sudah tersedia di folder proyek ini:
 
 - `assets/unggahan/` — Lembar Kerja Pertemuan 1 (DOCX) dan kunci jawaban (PDF)
-- `BG/` — Buku Guru Bahasa Inggris (Panduan Umum, Kover, Bab 1–6), sudah tertaut di Pusat Berkas
+- `BG/` — Buku Guru Bahasa Inggris (Panduan Umum, Kover, Bab 1–6), tersedia di halaman Unduh Berkas
 - `LK/` dan `LK-DONE/` — berkas sumber lembar kerja
 
 ### Memperbarui halaman Unduh Berkas
@@ -64,7 +63,7 @@ Berkas `.nojekyll` mencegah pemrosesan Jekyll.
 
 ## Catatan
 
-- Situs ini murni statis: unggahan dari Pusat Berkas dan draf admin tersimpan di peramban pengguna
-  (IndexedDB / localStorage), bukan di server.
+- Situs ini murni statis: draf dan berkas lokal dari panel admin tersimpan di peramban pengguna
+  (localStorage / IndexedDB), bukan di server.
 - Kata sandi admin adalah gerbang sederhana, bukan pengamanan sisi server. Jangan simpan data sensitif.
 - Cadangan: tab **Publikasi** → Unduh cadangan (opsional beserta berkas lokal) untuk memindahkan isi situs.

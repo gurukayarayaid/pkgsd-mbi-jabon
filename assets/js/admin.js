@@ -86,7 +86,7 @@
             '<div><h1>Panel admin</h1><p>' + esc(MBJ.state.ui.siteName || '') + ' · ' + esc(MBJ.state.program.title || '') + '</p></div>' +
             '<div class="admin-head__actions">' +
               '<a class="btn btn--ghost btn--sm" href="index.html">Lihat situs</a>' +
-              '<a class="btn btn--ghost btn--sm" href="media.html">Pusat berkas</a>' +
+              '<a class="btn btn--ghost btn--sm" href="downloads.html">Unduh berkas</a>' +
               '<button type="button" class="btn btn--sm" data-act="logout">Keluar</button>' +
             '</div>' +
           '</div>' +
@@ -325,7 +325,7 @@
 
       '<div class="panel">' +
         '<h2>Berkas terbit (tautan)</h2>' +
-        '<p class="panel__hint">Tautan yang muncul di Pusat Berkas dan dapat diunduh siapa pun. Gunakan berkas dalam repositori atau tautan Google Drive.</p>' +
+        '<p class="panel__hint">Tautan berkas pada materi dan dapat diunduh siapa pun. Gunakan berkas dalam repositori atau tautan Google Drive.</p>' +
         '<form data-form="pubfile" class="field-row" style="align-items:end">' +
           '<div class="field" style="grid-column:1/-1"><label>Nama berkas</label><input name="name" placeholder="Lembar Kerja Pertemuan 3" required></div>' +
           '<div class="field" style="grid-column:1/-1"><label>Tautan</label><input name="url" placeholder="assets/unggahan/lembar-kerja-3.pdf atau https://…" required></div>' +

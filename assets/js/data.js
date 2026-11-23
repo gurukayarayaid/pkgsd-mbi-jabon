@@ -151,7 +151,7 @@ window.DEFAULT_DATA = {
           id: 'm1-d',
           type: 'pdf',
           title: 'Lembar Kerja Pertemuan 1',
-          body: 'Lembar kerja peserta Pertemuan 1 beserta contoh pengisiannya. Unduh berkas di bawah, atau ambil versi DOCX di Pusat Berkas bila ingin menyunting.',
+          body: 'Lembar kerja peserta Pertemuan 1 beserta contoh pengisiannya. Unduh berkas di bawah, atau ambil versi DOCX di folder LK pada halaman Unduh Berkas bila ingin menyunting.',
           url: 'assets/unggahan/lembar-kerja-pertemuan-1-kunci-jawaban.pdf',
           caption: 'Lembar Kerja Pertemuan 1 dan kunci jawaban (PDF)'
         }
@@ -190,7 +190,7 @@ window.DEFAULT_DATA = {
           id: 'm2-c',
           type: 'pdf',
           title: 'Kartu Ungkapan Kelas (PDF)',
-          body: 'Kartu siap cetak berisi 24 ungkapan kelas beserta gambar pendukung. Unggah berkas PDF melalui panel admin atau Pusat Berkas.',
+          body: 'Kartu siap cetak berisi 24 ungkapan kelas beserta gambar pendukung. Unggah berkas PDF melalui panel admin.',
           url: '',
           caption: 'Media cetak pendukung'
         }
@@ -424,7 +424,7 @@ window.DEFAULT_DATA = {
           id: 'm8-c',
           type: 'pdf',
           title: 'Format Modul Ajar (PDF/DOCX)',
-          body: 'Format kosong siap diisi. Unggah berkas melalui Pusat Berkas agar dapat diunduh peserta lain.',
+          body: 'Format kosong siap diisi. Unggah berkas melalui panel admin agar dapat diunduh peserta lain.',
           url: '',
           caption: 'Format kosong'
         }

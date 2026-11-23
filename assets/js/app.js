@@ -478,7 +478,6 @@
     var nav = [
       { href: 'index.html', label: 'Beranda', key: 'home' },
       { href: 'index.html#pertemuan', label: '10 Pertemuan', key: 'meetings' },
-      { href: 'media.html', label: 'Pusat Berkas', key: 'media' },
       { href: 'downloads.html', label: 'Unduh Berkas', key: 'downloads' },
       { href: 'admin.html', label: 'Admin', key: 'admin' }
     ];
@@ -530,7 +529,6 @@
             '<div class="footer-col">' +
               '<div class="footer-title">Tautan</div>' +
               '<p><a href="index.html#pertemuan">Daftar pertemuan</a></p>' +
-              '<p><a href="media.html">Pusat berkas</a></p>' +
               '<p><a href="downloads.html">Unduh berkas per folder</a></p>' +
               '<p><a href="admin.html">Panel admin</a></p>' +
               (p.contactEmail ? '<p><a href="mailto:' + esc(p.contactEmail) + '">' + esc(p.contactEmail) + '</a></p>' : '') +

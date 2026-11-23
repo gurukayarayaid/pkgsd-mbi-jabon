@@ -455,7 +455,7 @@ p:last-child { margin-bottom: 0; }
 .pager strong { font-family: var(--serif); font-weight: 600; font-size: .95rem; }
 .pager .is-next { text-align: right; }
 
-/* ---------------- pusat berkas ---------------- */
+/* ---------------- berkas & unggahan ---------------- */
 .dropzone {
   border: 1.5px dashed var(--line-strong);
   border-radius: var(--radius);

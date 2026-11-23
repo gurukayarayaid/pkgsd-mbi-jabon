@@ -48,7 +48,7 @@
             '<p class="hero__desc">' + MBJ.esc(p.description || '') + '</p>' +
             '<div class="hero__actions">' +
               '<a class="btn" href="#pertemuan">Lihat 10 pertemuan</a>' +
-              '<a class="btn btn--ghost" href="media.html">Pusat berkas</a>' +
+              '<a class="btn btn--ghost" href="downloads.html">Unduh berkas</a>' +
             '</div>' +
           '</div>' +
           '<aside class="hero-card">' +
@@ -80,7 +80,7 @@
               '<h2>Sepuluh pertemuan, satu alur belajar</h2>' +
               '<p>Setiap pertemuan memuat tujuan pembelajaran, materi bacaan, media pendukung, dan tombol berbagi agar mudah dikirim ke rekan guru.</p>' +
             '</div>' +
-            '<a class="section-link" href="media.html">Semua berkas →</a>' +
+            '<a class="section-link" href="downloads.html">Semua berkas →</a>' +
           '</div>' +
           '<div class="meeting-grid">' + meetings.map(meetingCard).join('') + '</div>' +
         '</div>' +
@@ -90,16 +90,16 @@
         '<div class="wrap">' +
           '<div class="section-head">' +
             '<div>' +
-              '<h2>Pusat berkas program</h2>' +
-              '<p>Gambar, video, audio, PDF, dan dokumen pendukung dapat diunggah serta diunduh kembali di satu tempat.</p>' +
+              '<h2>Unduh berkas program</h2>' +
+              '<p>Seluruh PDF, dokumen, gambar, audio, dan video pendukung dikelompokkan per folder. Unduh satu berkas atau seluruh isi folder sekaligus.</p>' +
             '</div>' +
-            '<a class="btn btn--ghost" href="media.html">Buka pusat berkas</a>' +
+            '<a class="btn btn--ghost" href="downloads.html">Buka unduh berkas</a>' +
           '</div>' +
           '<div class="meeting-grid">' +
             '<div class="meeting-card" style="cursor:default">' +
-              '<span class="meeting-card__day">Unggah &amp; unduh</span>' +
-              '<h3>Simpan berkas media dan dokumen</h3>' +
-              '<p>Tarik berkas ke area unggah, lalu unduh kembali kapan saja. Setiap berkas memiliki keterangan jenis dan ukuran.</p>' +
+              '<span class="meeting-card__day">Unduh per folder</span>' +
+              '<h3>Ambil berkas materi sekaligus</h3>' +
+              '<p>Pilih folder materi, lalu unduh semua berkasnya dalam satu ZIP tanpa perlu mengunduh satu per satu.</p>' +
             '</div>' +
             '<div class="meeting-card" style="cursor:default">' +
               '<span class="meeting-card__day">Berbagi</span>' +
