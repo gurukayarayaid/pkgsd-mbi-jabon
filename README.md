@@ -12,6 +12,7 @@ Situs statis (HTML, CSS, JavaScript tanpa build), siap dipasang di GitHub Pages.
 | `index.html` | Beranda: informasi program, progres, 10 kartu pertemuan, tombol berbagi |
 | `pertemuan.html?id=hari-1` | Materi satu pertemuan: tujuan, teks, gambar, video, PDF, tombol berbagi per materi |
 | `media.html` | Pusat berkas: unggah (tarik & lepas), cari, saring, buka, unduh |
+| `downloads.html` | Unduh berkas per folder (BG, BS, Infografik Topik 1, LK, LK-DONE, RPP, RPTM, SPT, STEP JIGSAW), cari berkas, dan **Unduh semua (.zip)** per folder |
 | `admin.html` | Panel admin: dasbor, program, pertemuan & materi, berkas, publikasi, akun |
 
 ## Mengelola isi
@@ -30,6 +31,20 @@ Berkas yang sudah tersedia di folder proyek ini:
 - `assets/unggahan/` — Lembar Kerja Pertemuan 1 (DOCX) dan kunci jawaban (PDF)
 - `BG/` — Buku Guru Bahasa Inggris (Panduan Umum, Kover, Bab 1–6), sudah tertaut di Pusat Berkas
 - `LK/` dan `LK-DONE/` — berkas sumber lembar kerja
+
+### Memperbarui halaman Unduh Berkas
+
+Daftar berkas pada `downloads.html` berasal dari `assets/js/downloads-data.js` yang dibuat
+dari isi folder materi (folder sementara `.DS_Store` dan `~$…` diabaikan). Setiap kali
+menambah, mengganti, atau menghapus berkas di folder tersebut, jalankan:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\build-downloads.ps1
+```
+
+Lalu unggah `assets/js/downloads-data.js` yang baru ke repositori. Tombol **Unduh semua (.zip)**
+mengambil berkas dari folder asli dan merakit ZIP langsung di peramban pengunjung; tidak ada
+berkas ZIP besar yang perlu disimpan di repositori.
 
 ## Berbagi
 

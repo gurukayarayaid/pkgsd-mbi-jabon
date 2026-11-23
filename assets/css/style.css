@@ -517,6 +517,74 @@ p:last-child { margin-bottom: 0; }
   background: rgba(255, 255, 255, .5);
 }
 
+/* ---------------- unduh berkas per folder ---------------- */
+[hidden] { display: none !important; }
+
+.dl-groups { display: grid; gap: 1rem; margin-top: 1.2rem; }
+.dl-group {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.dl-group__head {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1.2rem 1.35rem;
+  flex-wrap: wrap;
+}
+.dl-group__icon {
+  flex: 0 0 auto;
+  width: 46px; height: 46px;
+  display: grid; place-items: center;
+  border-radius: 13px;
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+.dl-group__icon svg { width: 25px; height: 25px; }
+.dl-group__info { flex: 1 1 300px; min-width: 0; }
+.dl-group__info h2 { font-size: 1.2rem; margin: 0 0 .2rem; display: flex; align-items: baseline; gap: .55rem; flex-wrap: wrap; }
+.dl-group__info p { color: var(--ink-soft); font-size: .86rem; margin: 0 0 .4rem; }
+.dl-group__code {
+  font-family: var(--sans); font-size: .68rem; font-weight: 700;
+  letter-spacing: .08em; color: var(--accent);
+  background: var(--accent-soft); border-radius: 999px; padding: .15rem .55rem;
+}
+.dl-group__meta { display: flex; flex-wrap: wrap; gap: .45rem; font-size: .76rem; color: var(--muted); }
+.dl-group__meta span + span::before { content: "·"; margin-right: .45rem; }
+.dl-group__actions { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; margin-left: auto; }
+
+.dl-progress { padding: 0 1.35rem 1rem; }
+.dl-progress__text { font-size: .78rem; color: var(--ink-soft); margin-bottom: .35rem; word-break: break-word; }
+.dl-progress__track { height: 7px; border-radius: 999px; background: var(--bg-soft); overflow: hidden; }
+.dl-progress__track span { display: block; height: 100%; width: 0; background: var(--brand); border-radius: inherit; transition: width .18s ease; }
+
+.dl-files { border-top: 1px solid var(--line); }
+.dl-file {
+  display: flex; align-items: center; gap: .8rem;
+  padding: .6rem 1.35rem;
+  border-bottom: 1px solid var(--line);
+}
+.dl-file:last-child { border-bottom: 0; }
+.dl-file:nth-child(even) { background: #fcfaf6; }
+.dl-file__ext {
+  flex: 0 0 auto;
+  min-width: 44px; text-align: center;
+  font-size: .65rem; font-weight: 700; letter-spacing: .06em;
+  padding: .25rem .35rem; border-radius: 6px;
+  background: var(--bg-soft); color: var(--ink-soft);
+}
+.dl-file__ext--pdf { background: #fbecea; color: var(--danger); }
+.dl-file__ext--image { background: #eaf1f7; color: #2e6187; }
+.dl-file__ext--video { background: #f1ebf7; color: #6c4a8a; }
+.dl-file__ext--audio { background: #eaf4ee; color: #2f7d5c; }
+.dl-file__ext--doc { background: var(--accent-soft); color: #8a5a13; }
+.dl-file__info { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; line-height: 1.35; }
+.dl-file__name { font-size: .84rem; font-weight: 500; word-break: break-word; }
+.dl-file__path { font-size: .72rem; color: var(--muted); word-break: break-all; }
+.dl-file__size { flex: 0 0 auto; font-size: .74rem; color: var(--muted); }
+.dl-file .btn { flex: 0 0 auto; }
+
 /* ---------------- admin ---------------- */
 .login-shell { display: grid; place-items: center; padding: 3.5rem 0 4.5rem; }
 .login-card {
@@ -679,6 +747,12 @@ p:last-child { margin-bottom: 0; }
   .footer-inner { grid-template-columns: 1fr; }
   .fact { grid-template-columns: 76px 1fr; }
   .login-card { padding: 1.5rem; }
+  .dl-group__head { padding: 1rem; }
+  .dl-group__actions { margin-left: 0; width: 100%; }
+  .dl-progress { padding: 0 1rem 1rem; }
+  .dl-file { padding: .6rem 1rem; flex-wrap: wrap; }
+  .dl-file__info { flex-basis: calc(100% - 70px); }
+  .dl-file__size { margin-left: 52px; }
 }
 
 @media print {
